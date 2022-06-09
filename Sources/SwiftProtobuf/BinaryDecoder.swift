@@ -753,7 +753,8 @@ internal struct BinaryDecoder: Decoder {
             value = s
             consumed = true
         } else {
-            throw BinaryDecodingError.invalidUTF8
+            value = ""
+            consumed = true
         }
     }
 
@@ -767,7 +768,8 @@ internal struct BinaryDecoder: Decoder {
             value = s
             consumed = true
         } else {
-            throw BinaryDecodingError.invalidUTF8
+            value = nil
+            consumed = true
         }
     }
 
